@@ -1,0 +1,15 @@
+.gjs-am-file-uploader {
+  display: none;
+}
+.gjs-am-assets-cont {
+  width: 100%;
+}
+.gjs-am-assets-cont {
+  width: 100% !important;
+  height: auto !important;
+}
+/* 
+
+.gjs-am-assets{
+    display: none !important;
+} */

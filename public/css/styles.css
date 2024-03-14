@@ -1,0 +1,52 @@
+@import url("/css/fonts.css");
+
+body[data-bs-theme="dark"] .bg-light {
+  background-color: var(--bs-body-bg) !important;
+}
+
+footer .container {
+  max-width: 300px;
+}
+
+body {
+  font-size: 1.3rem;
+}
+
+.lead{
+  font-size: 1.6rem;
+}
+
+h1, h2, h3 {
+  font-family: "Abril Fatface";
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+body{
+  font-family: "Outfit";
+  font-size: 1.4rem;
+}
+
+body[data-bs-theme="light"] {
+  --bs-body-bg: #fec7d7;
+  --bs-heading-color: #0e172c;
+  --bs-btn-bg: #fec7d7;
+  --bs-tertiary-bg-rgb: 167, 134, 223;
+  --bs-link-color-rgb: 14, 23, 44;
+  --bs-link-hover-color-rgb: 167, 134, 223;
+}
+
+h1 a:hover{
+  color: var(--bs-heading-color);
+  text-decoration: underline !important;
+}
+
+.screenshot{
+  max-width: 640px;
+}
