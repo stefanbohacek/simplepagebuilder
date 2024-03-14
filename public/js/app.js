@@ -9,6 +9,7 @@ onReady(() => {
       "gjs-blocks-basic",
       "grapesjs-custom-code",
       "grapesjs-plugin-export",
+      "grapesjs-touch",
     ],
     autorender: false,
     pluginsOpts: {
@@ -18,6 +19,7 @@ onReady(() => {
       },
       "grapesjs-custom-code": {},
       "grapesjs-plugin-export": {},
+      "grapesjs-touch": {},
     },
   });
 
