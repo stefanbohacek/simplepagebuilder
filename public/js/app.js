@@ -49,6 +49,7 @@ onReady(() => {
 
   editor.on("load", () => {
     editor.Panels.getButton("views", "open-blocks").set("active", true);
+    // editor.Panels.removePanel('devices-c')
   });
 
   // const bm = editor.Blocks;
