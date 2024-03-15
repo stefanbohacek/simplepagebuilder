@@ -6,7 +6,7 @@ const toggleDarkMode = (enabled) => {
     }
 }
 
-const enableDarkMode = () => {
+export default () => {
     if (window.matchMedia) {
         toggleDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
     }
@@ -14,6 +14,4 @@ const enableDarkMode = () => {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
         toggleDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
     });
-}
-
-export default enableDarkMode;
+};

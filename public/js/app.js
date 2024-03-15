@@ -18,7 +18,35 @@ onReady(() => {
         textCleanCanvas: "Are you sure you want to remove everything?",
       },
       "grapesjs-custom-code": {},
-      "grapesjs-plugin-export": {},
+      "grapesjs-plugin-export": {
+        filenamePfx: "my-personal-site",
+        root: {
+          files: {
+            "index.html": (ed) =>
+              html_beautify(/* html */ `
+            <!DOCTYPE html>
+              <html lang="en">
+                <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>My personal site</title>
+                  <link href="./css/style.css" rel="stylesheet">
+                </head>
+                ${ed.getHtml()}
+            </html>          
+            `),
+            css: {
+              "style.css": (ed) => ed.getCss(),
+            },
+            "README.md": "Made with https://simplepagebuilder.app/",
+            // img: async ed => {
+            //   const images = await fetchImagesByStructue(ed.getComponents());
+            //   return images;
+            //   // { 'img1.png': '...png content', 'img2.jpg': '...jpg content' }
+            // },
+          },
+        },
+      },
       "grapesjs-touch": {},
     },
   });
@@ -41,7 +69,7 @@ onReady(() => {
       id: "save",
       className: "fa fa-question icon-blank",
       command: (editor, sender) => {
-        window.open("/about", '_blank').focus();
+        window.open("/about", "_blank").focus();
       },
       attributes: { title: "Help" },
     },
@@ -54,7 +82,7 @@ onReady(() => {
 
   // const bm = editor.Blocks;
   // const imageBlock = bm.get('image');
-  
+
   // imageBlock.set({
   //   label: 'Updated block',
   // });
