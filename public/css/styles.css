@@ -71,3 +71,7 @@ h1 a:hover {
   left: auto;
   background-color: rgb(var(--bs-tertiary-bg-rgb));
 }
+
+#back-to-top:hover {
+  bottom: 5px !important;
+}
