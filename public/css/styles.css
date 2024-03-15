@@ -52,6 +52,10 @@ h1 a:hover{
   text-decoration: underline !important;
 }
 
+a.btn-outline-light:hover{
+  color: var(--bs-heading-color) !important;
+}
+
 .screenshot{
   max-width: 640px;
 }
@@ -61,7 +65,4 @@ h1 a:hover{
   right: 0;
   left: auto;
   background-color: rgb(var(--bs-tertiary-bg-rgb));
-}
-
-#back-to-top a{
 }
