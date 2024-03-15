@@ -12,23 +12,25 @@ body {
   font-size: 1.3rem;
 }
 
-.lead{
+.lead {
   font-size: 1.6rem;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Abril Fatface";
 }
 
-h1{
+h1 {
   font-size: 3rem;
 }
 
-h2{
+h2 {
   font-size: 2rem;
 }
 
-body{
+body {
   font-family: "Outfit";
   font-size: 1.4rem;
 }
@@ -42,25 +44,25 @@ body[data-bs-theme="light"] {
   --bs-link-hover-color-rgb: 167, 134, 223;
 }
 
-h1 a:hover{
+h1 a:hover {
   color: var(--bs-heading-color);
   text-decoration: underline !important;
 }
 
-.bg-body-tertiary a:hover{
+.bg-body-tertiary a:hover {
   color: var(--bs-body-bg);
   text-decoration: underline !important;
 }
 
-a.btn-outline-light:hover{
+a.btn-outline-light:hover {
   color: var(--bs-heading-color) !important;
 }
 
-.screenshot{
+.screenshot {
   max-width: 640px;
 }
 
-#back-to-top{
+#back-to-top {
   text-align: center;
   right: 0;
   left: auto;
