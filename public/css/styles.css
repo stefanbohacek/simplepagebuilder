@@ -55,3 +55,13 @@ h1 a:hover{
 .screenshot{
   max-width: 640px;
 }
+
+#back-to-top{
+  text-align: center;
+  right: 0;
+  left: auto;
+  background-color: rgb(var(--bs-tertiary-bg-rgb));
+}
+
+#back-to-top a{
+}
