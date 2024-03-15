@@ -47,6 +47,11 @@ h1 a:hover{
   text-decoration: underline !important;
 }
 
+.bg-body-tertiary a:hover{
+  color: var(--bs-body-bg);
+  text-decoration: underline !important;
+}
+
 .screenshot{
   max-width: 640px;
 }
