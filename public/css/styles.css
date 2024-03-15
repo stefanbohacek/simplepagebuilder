@@ -1,9 +1,5 @@
 @import url("/css/fonts.css");
 
-body[data-bs-theme="dark"] .bg-light {
-  background-color: var(--bs-body-bg) !important;
-}
-
 footer .container {
   max-width: 300px;
 }
@@ -44,18 +40,25 @@ body[data-bs-theme="light"] {
   --bs-link-hover-color-rgb: 167, 134, 223;
 }
 
-h1 a:hover {
+body[data-bs-theme="light"] h1 a:hover {
   color: var(--bs-heading-color);
-  text-decoration: underline !important;
 }
 
-.bg-body-tertiary a:hover {
+body[data-bs-theme="light"] .bg-body-tertiary a:hover {
   color: var(--bs-body-bg);
   text-decoration: underline !important;
 }
 
-a.btn-outline-light:hover {
+body[data-bs-theme="light"] a.btn-outline-light:hover {
   color: var(--bs-heading-color) !important;
+}
+
+body[data-bs-theme="dark"] .bg-light {
+  background-color: var(--bs-body-bg) !important;
+}
+
+h1 a:hover {
+  text-decoration: underline !important;
 }
 
 .screenshot {
