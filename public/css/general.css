@@ -1,0 +1,46 @@
+
+body {
+  font-family: "Outfit";
+  font-size: 1.4rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Abril Fatface";
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h1 a:hover {
+  text-decoration: underline !important;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+footer .container {
+  max-width: 300px;
+}
+
+.lead {
+  font-size: 1.6rem;
+}
+
+.screenshot {
+  max-width: 640px;
+}
+
+#back-to-top {
+  text-align: center;
+  right: 0;
+  left: auto;
+  background-color: rgb(var(--bs-tertiary-bg-rgb));
+}
+
+#back-to-top:hover {
+  bottom: 5px !important;
+}
