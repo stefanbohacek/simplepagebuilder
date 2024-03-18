@@ -75,6 +75,13 @@ onReady(() => {
     },
   ]);
 
+  const importBtn = editor.Panels.getButton('options', 'gjs-open-import-webpage');
+  
+  importBtn.set({
+    className: "fa fa-upload icon-blank",
+    label: '',
+  });
+
   editor.on("load", () => {
     editor.Panels.getButton("views", "open-blocks").set("active", true);
     // editor.Panels.removePanel('devices-c')
