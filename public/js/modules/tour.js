@@ -17,8 +17,7 @@ const steps = [
         For a more detailed walkthrough, please <a href='/about' onClick="window.showAboutPage()">visit the About page</a>.
     </p>
     `,
-    order: "",
-    group: "",
+    order: 1,
   },
   {
     title: "Building blocks",
@@ -26,8 +25,7 @@ const steps = [
         Use the <span title="Help" class="fa fa-plus"></span> button to open the block menu.
     `,
     target: "[title='Open Blocks']",
-    order: "",
-    group: "",
+    order: 2,
   },
   {
     title: "Building blocks",
@@ -35,8 +33,7 @@ const steps = [
         From here you can add page sections and elements to your page.
     `,
     target: "[title='1 Column']",
-    order: "",
-    group: "",
+    order: 3,
   },
   {
     title: "Building blocks",
@@ -44,8 +41,7 @@ const steps = [
         Note that this editor does not provide hosting for your images, so please upload them elsewhere and use the URL field inside the image block to add them to your page.
     `,
     target: "[title='Image']",
-    order: "",
-    group: "",
+    order: 4,
   },
   {
     title: "Export your website",
@@ -58,8 +54,7 @@ const steps = [
         </p>
     `,
     target: "[title='View code']",
-    order: "",
-    group: "",
+    order: 5,
   },
   {
     title: "Revisit the guide",
@@ -67,16 +62,14 @@ const steps = [
         If you need a refresher, use the <span title="Help" class="fa fa-question"></span> button to bring back this walkthrough.
     `,
     target: ".gjs-pn-btn.fa.fa-question.icon-blank",
-    order: "",
-    group: "",
+    order: 6,
   },
   {
     title: "Have fun!",
     content: /* html */ `
         I hope you'll enjoy making your (first) web page, and feel free to <a href='/about' onClick="window.showContactPage()">reach out</a> to share it, or if you have any questions!
     `,
-    order: "",
-    group: "",
+    order: 7,
   },
 ];
 
