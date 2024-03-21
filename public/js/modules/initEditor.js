@@ -58,6 +58,7 @@ export default () => {
     // ["views", "open-tm"],
     ["options", "sw-visibility"],
     ["options", "fullscreen"],
+    ["options", "gjs-open-import-webpage"],
     // ["options", "export-template"]
   ].forEach((item) => {
     const btn = editor.Panels.getButton(item[0], item[1]);
@@ -168,15 +169,15 @@ export default () => {
     },
   ]);
 
-  const importBtn = editor.Panels.getButton(
-    "options",
-    "gjs-open-import-webpage"
-  );
+  // const importBtn = editor.Panels.getButton(
+  //   "options",
+  //   "gjs-open-import-webpage"
+  // );
 
-  importBtn.set({
-    className: "fa fa-upload icon-blank",
-    label: "",
-  });
+  // importBtn.set({
+  //   className: "fa fa-upload icon-blank",
+  //   label: "",
+  // });
 
   editor.on("load", () => {
     editor.Panels.getButton("views", "open-blocks").set("active", true);

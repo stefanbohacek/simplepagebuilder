@@ -27,3 +27,11 @@
 .tg-dialog-body{
   font-size: 1.2rem !important;
 }
+
+.gjs-pn-options {
+  padding-bottom: 0 !important;
+}
+
+.gjs-pn-btn.fa-edit {
+  padding-top: 8px;
+}
