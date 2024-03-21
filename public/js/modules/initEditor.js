@@ -64,12 +64,81 @@ export default () => {
     btn.collection.remove(btn);
   });
 
+  /* Allow editing the HTML code. */
+  // source: https://github.com/GrapesJS/grapesjs/issues/324
+
+  const pfx = editor.getConfig().stylePrefix;
+  const modal = editor.Modal;
+  const cmdm = editor.Commands;
+  const codeViewer = editor.CodeManager.getViewer("CodeMirror").clone();
+  const pnm = editor.Panels;
+  const container = document.createElement("div");
+  const btnEdit = document.createElement("button");
+
+  codeViewer.set({
+    codeName: "htmlmixed",
+    readOnly: 0,
+    theme: "hopscotch",
+    autoBeautify: true,
+    autoCloseTags: true,
+    autoCloseBrackets: true,
+    lineWrapping: true,
+    styleActiveLine: true,
+    smartIndent: true,
+    indentWithTabs: true,
+  });
+
+  btnEdit.innerHTML = "Save";
+  btnEdit.className = pfx + "btn-prim " + pfx + "btn-import";
+  btnEdit.onclick = () => {
+    var code = codeViewer.editor.getValue();
+    editor.DomComponents.getWrapper().set("content", "");
+    editor.setComponents(code.trim());
+    modal.close();
+  };
+
+  cmdm.add("html-edit", {
+    run: (editor, sender) => {
+      sender && sender.set("active", 0);
+      let viewer = codeViewer.editor;
+      modal.setTitle("Edit code");
+      if (!viewer) {
+        var txtarea = document.createElement("textarea");
+        container.appendChild(txtarea);
+        container.appendChild(btnEdit);
+        codeViewer.init(txtarea);
+        viewer = codeViewer.editor;
+      }
+      const innerHtml = editor.getHtml();
+      // const css = editor.getCss();
+      modal.setContent("");
+      modal.setContent(container);
+      // codeViewer.setContent(innerHtml + "<style>" + css + '</style>');
+      codeViewer.setContent(innerHtml);
+      modal.open();
+      viewer.refresh();
+    },
+  });
+
+  pnm.addButton("options", [
+    {
+      id: "edit",
+      className: "fa fa-edit",
+      command: "html-edit",
+      attributes: {
+        title: "Edit HTML code",
+      },
+    },
+  ]);
+
+  /* Add "Help" button. */
+
   editor.Panels.addButton("options", [
     {
       id: "save",
       className: "fa fa-question icon-blank",
       command: (editor, sender) => {
-        document.documentElement.style.overflow = "hidden";       
+        document.documentElement.style.overflow = "hidden";
         tourGuide.start();
         // window.open("/about", "_blank").focus();
       },
