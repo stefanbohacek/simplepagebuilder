@@ -70,13 +70,27 @@ export default () => {
   const pfx = editor.getConfig().stylePrefix;
   const modal = editor.Modal;
   const cmdm = editor.Commands;
-  const codeViewer = editor.CodeManager.getViewer("CodeMirror").clone();
+  const htmlCodeViewer = editor.CodeManager.getViewer("CodeMirror").clone();
+  const cssCodeViewer = editor.CodeManager.getViewer("CodeMirror").clone();
   const pnm = editor.Panels;
   const container = document.createElement("div");
   const btnEdit = document.createElement("button");
 
-  codeViewer.set({
+  htmlCodeViewer.set({
     codeName: "htmlmixed",
+    readOnly: 0,
+    theme: "hopscotch",
+    autoBeautify: true,
+    autoCloseTags: true,
+    autoCloseBrackets: true,
+    lineWrapping: true,
+    styleActiveLine: true,
+    smartIndent: true,
+    indentWithTabs: true,
+  });
+
+  cssCodeViewer.set({
+    codeName: "css",
     readOnly: 0,
     theme: "hopscotch",
     autoBeautify: true,
@@ -91,32 +105,40 @@ export default () => {
   btnEdit.innerHTML = "Save";
   btnEdit.className = pfx + "btn-prim " + pfx + "btn-import";
   btnEdit.onclick = () => {
-    var code = codeViewer.editor.getValue();
+    const html = htmlCodeViewer.editor.getValue();
+    const css = cssCodeViewer.editor.getValue();
     editor.DomComponents.getWrapper().set("content", "");
-    editor.setComponents(code.trim());
+    editor.setComponents(html.trim());
+    editor.setStyle(css);
     modal.close();
   };
 
-  cmdm.add("html-edit", {
+  cmdm.add("edit-code", {
     run: (editor, sender) => {
       sender && sender.set("active", 0);
-      let viewer = codeViewer.editor;
+      let htmlViewer = htmlCodeViewer.editor;
+      let cssViewer = cssCodeViewer.editor;
       modal.setTitle("Edit code");
-      if (!viewer) {
-        var txtarea = document.createElement("textarea");
+      if (!htmlViewer && !cssViewer) {
+        const txtarea = document.createElement("textarea");
+        const cssarea = document.createElement("textarea");
         container.appendChild(txtarea);
+        container.appendChild(cssarea);
         container.appendChild(btnEdit);
-        codeViewer.init(txtarea);
-        viewer = codeViewer.editor;
+        htmlCodeViewer.init(txtarea);
+        cssCodeViewer.init(cssarea);
+        htmlViewer = htmlCodeViewer.editor;
+        cssViewer = cssCodeViewer.editor;
       }
-      const innerHtml = editor.getHtml();
-      // const css = editor.getCss();
+      const InnerHtml = editor.getHtml();
+      const Css = editor.getCss();
       modal.setContent("");
       modal.setContent(container);
-      // codeViewer.setContent(innerHtml + "<style>" + css + '</style>');
-      codeViewer.setContent(innerHtml);
+      htmlCodeViewer.setContent(InnerHtml);
+      cssCodeViewer.setContent(Css);
       modal.open();
-      viewer.refresh();
+      htmlViewer.refresh();
+      cssViewer.refresh();
     },
   });
 
@@ -124,9 +146,9 @@ export default () => {
     {
       id: "edit",
       className: "fa fa-edit",
-      command: "html-edit",
+      command: "edit-code",
       attributes: {
-        title: "Edit HTML code",
+        title: "Edit Code",
       },
     },
   ]);
