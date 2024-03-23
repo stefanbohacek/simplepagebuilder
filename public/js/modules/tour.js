@@ -1,5 +1,5 @@
-window.showAboutPage = () => {
-  window.open("/about", "_blank").focus();
+window.openTutorialPage = () => {
+  window.open("/tutorial", "_blank").focus();
 };
 
 window.showContactPage = () => {
@@ -14,7 +14,7 @@ const steps = [
         This is a short guide to get you familiar with the interface.
     </p>
     <p>
-        For a more detailed walkthrough, please <a href='/about' onClick="window.showAboutPage()">visit the About page</a>.
+        For a more detailed walkthrough, please <a href='/tutorial' onClick="window.openTutorialPage()">visit the Tutorial page</a>.
     </p>
     `,
     order: 1,
@@ -50,7 +50,7 @@ const steps = [
         Once you're happy with how your page looks, you can export it as a compressed ZIP file by clicking the <span title="Code" class="fa fa-code"></span> button and selecting the "Export to ZIP" option.
         </p>
         <p>
-            The <a href='/about' onClick="window.showAboutPage()">full guide</a> will show you how you can host it completely for free.
+            The <a href='/tutorial' onClick="window.openTutorialPage()">full guide</a> will show you how you can host it completely for free.
         </p>
     `,
     target: "[title='View code']",
@@ -67,7 +67,7 @@ const steps = [
   {
     title: "Have fun!",
     content: /* html */ `
-        I hope you'll enjoy making your (first) web page, and feel free to <a href='/about' onClick="window.showContactPage()">reach out</a> to share it, or if you have any questions!
+        I hope you'll enjoy making your (first) web page, and feel free to <a href='https://stefanbohacek.com/contact/' onClick="window.showContactPage()">reach out</a> to share it, or if you have any questions!
     `,
     order: 7,
   },

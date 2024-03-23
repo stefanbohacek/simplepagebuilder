@@ -6,6 +6,7 @@ import { engine } from "express-handlebars";
 import indexRoute from "./routes/index.js";
 import appRoute from "./routes/app.js";
 import aboutRoute from "./routes/about.js";
+import tutorialRoute from "./routes/tutorial.js";
 
 const app = express();
 
@@ -35,5 +36,6 @@ app.set("views", "./views");
 app.use("/", indexRoute);
 app.use("/app", appRoute);
 app.use("/about", aboutRoute);
+app.use("/tutorial", tutorialRoute);
 
 export default app;

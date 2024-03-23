@@ -163,7 +163,6 @@ export default () => {
       command: (editor, sender) => {
         document.documentElement.style.overflow = "hidden";
         tourGuide.start();
-        // window.open("/about", "_blank").focus();
       },
       attributes: { title: "Help" },
     },
