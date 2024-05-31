@@ -1,0 +1,1 @@
+export default()=>{const e=()=>{document.querySelectorAll("pre code").forEach((e=>{hljs.highlightBlock(e)}));let e=document.querySelectorAll("pre code.hljs");Array.prototype.forEach.call(e,(e=>{const l=e.result.language;e.insertAdjacentHTML("afterbegin",`<label>${l}</label>`)}))};"undefined"!=typeof hljs?e():setTimeout(e,2e3)};//# sourceMappingURL=highlightCode.js.map

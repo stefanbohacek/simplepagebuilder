@@ -1,0 +1,1 @@
+{"version":3,"sources":["typography.scss","typography.css"],"names":[],"mappings":"AAAA,GACE,4BCCF","file":"typography.css","sourcesContent":["h1{\r\n  margin-bottom: 3rem!important;\r\n}","h1 {\n  margin-bottom: 3rem !important;\n}"]}

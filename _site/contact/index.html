@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Project description"/>
+    <title>Contact | Site title</title>
+    <link rel="stylesheet" href="/bootstrap/bootstrap.css"/>
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <script type="module" src="/js/main.js" defer></script>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <script>
+      const toggleDarkMode = (enabled) => {
+        const stickyTops = [...document.getElementsByClassName("sticky-top")];
+        if (enabled) {
+          document.body.setAttribute('data-bs-theme', 'dark');
+          if (stickyTops && stickyTops.length) {
+            stickyTops.forEach(stickyTop => {
+              stickyTop.classList.add("bg-dark");
+              stickyTop.classList.remove("bg-white");
+            });
+          }
+        } else {
+          document.body.setAttribute('data-bs-theme', 'light');
+          if (stickyTops && stickyTops.length) {
+            stickyTops.forEach(stickyTop => {
+              stickyTop.classList.add("bg-white");
+              stickyTop.classList.remove("bg-dark");
+            });
+          }
+        }
+      }
+      if (window.matchMedia) {
+        toggleDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+        toggleDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
+      });
+    </script>
+    <main class="flex-shrink-0 mt-5">
+      <div class="container mt-5">
+        <h1>Contact</h1>
+
+      </div>
+    </main>
+    <footer class="footer mt-auto py-3 bg-body-tertiary">
+      <div class="container" style="max-width: 500px;">
+        <div class="row align-items-center">
+          <div class="col-4 mx-auto text-center">
+            <p>
+              <a href="https://fightfascism.glitch.me/">
+                <img
+                  class="mw-100"
+                  loading="lazy"
+                  title="Fight Fascism sticker by Angus Johnston"
+                  alt="Fight fascism"
+                  src="/images/logos/fight-fascism-square.png">
+              </a>
+            </p>
+          </div>
+          <div class="col-4 mx-auto text-center">
+            <p>
+              <a href="https://blacklivesmatter.com/">
+                <img class="mw-100" loading="lazy" alt="Black Lives Matter" title="Black Lives Matter logo" src="/images/logos/blm.png">
+              </a>
+            </p>
+          </div>
+          <div class="col-4 mx-auto text-center">
+            <p>
+              <a href="https://indieweb.org/">
+                <img class="mw-100" loading="lazy" alt="IndieWeb" title="Support #indieweb!" src="/images/logos/indiewebcamp-black.png">
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container pt-5 pb-3 text-center">
+        <p class="text-body-secondary">
+          Created by
+          <a class="text-body-secondary" href="https://stefanbohacek.com/">Stefan Bohacek</a>.
+        </p>
+      </div>
+      <a
+        id="back-to-top"
+        class="fixed-bottom btn btn-secondary rounded-bottom-0 d-none pl-0"
+        role="button"
+        href="#"
+        title="Back to Top">
+        <svg
+          xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" width="1em" height="1em" fill="currentColor">
+          <!--! Font Awesome Free 6.4.2  -->
+          <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6
+            342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path>
+        </svg>
+        <small class="fw-bold">Back to top</small>
+      </a>
+    </footer>
+  </body>
+</html>

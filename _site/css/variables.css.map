@@ -1,0 +1,1 @@
+{"version":3,"sources":["variables.scss","variables.css"],"names":[],"mappings":"AAAA,MACE,oCCCF","file":"variables.css","sourcesContent":[":root {\r\n  --bs-heading-color: #424242 !important;\r\n}\r\n",":root {\n  --bs-heading-color: #424242 !important;\n}"]}

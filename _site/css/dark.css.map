@@ -1,0 +1,1 @@
+{"version":3,"sources":["dark.scss","dark.css"],"names":[],"mappings":"AAAA,mCACE,4CCCF","file":"dark.css","sourcesContent":["body[data-bs-theme=\"dark\"] .bg-light {\r\n  background-color: var(--bs-body-bg) !important;\r\n}\r\n","body[data-bs-theme=dark] .bg-light {\n  background-color: var(--bs-body-bg) !important;\n}"]}

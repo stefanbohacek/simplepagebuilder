@@ -1,0 +1,37 @@
+@import url("/css/fonts.css");
+
+.gjs-am-file-uploader {
+  display: none;
+}
+.gjs-am-assets-cont {
+  width: 100%;
+}
+.gjs-am-assets-cont {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* 
+.gjs-am-assets{
+    display: none !important;
+}
+*/
+
+.tg-dialog-title,
+.tg-dialog-body,
+.tg-step-progress{
+  font-family: "Outfit";
+}
+
+.tg-dialog-title,
+.tg-dialog-body{
+  font-size: 1.2rem !important;
+}
+
+.gjs-pn-options {
+  padding-bottom: 0 !important;
+}
+
+.gjs-pn-btn.fa-edit {
+  padding-top: 8px;
+}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["layout.scss","layout.css"],"names":[],"mappings":"AAAA,aAGE,SAAA,CACA,wBAAA,CAFA,OAAA,CADA,WCIF","file":"layout.css","sourcesContent":["#back-to-top{\r\n  width: 10rem;\r\n  right: 0;\r\n  left: auto;\r\n  padding-left: 0 !important;\r\n}","#back-to-top {\n  width: 10rem;\n  right: 0;\n  left: auto;\n  padding-left: 0 !important;\n}"]}

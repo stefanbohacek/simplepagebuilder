@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="Design your own personal page and find tools to host it for free."/>
+<title>Home | A simple page builder app.</title>
+ <link rel="stylesheet" href="/bootstrap/bootstrap.css"/>
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <script type="module" src="/js/main.js" defer></script>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <script>
+      const toggleDarkMode = (enabled) => {
+        const stickyTops = [...document.getElementsByClassName("sticky-top")];
+        if (enabled) {
+          document.body.setAttribute('data-bs-theme', 'dark');
+          if (stickyTops && stickyTops.length) {
+            stickyTops.forEach(stickyTop => {
+              stickyTop.classList.add("bg-dark");
+              stickyTop.classList.remove("bg-white");
+            });
+          }
+        } else {
+          document.body.setAttribute('data-bs-theme', 'light');
+          if (stickyTops && stickyTops.length) {
+            stickyTops.forEach(stickyTop => {
+              stickyTop.classList.add("bg-white");
+              stickyTop.classList.remove("bg-dark");
+            });
+          }
+        }
+      }
+      if (window.matchMedia) {
+        toggleDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+        toggleDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
+      });
+    </script>
+    <main class="flex-shrink-0">
+      <div class="container">
+        <div class="p-5 text-center bg-body-tertiary rounded-3">
+    <h1 class="mt-5 mb-3 text-body-emphasis">A simple page builder app ✨</h1>
+    <p class="col-lg-8 mx-auto lead text-muted">
+        Design your own personal page and find tools to host it online for free.
+    </p>
+    <div class="d-inline-flex gap-2 mt-5 mb-5">
+        <a href="/tutorial" class="d-inline-flex align-items-center btn btn-dark btn-lg px-4 rounded-pill">
+            Get started
+        </a>
+        <a href="/app" class="btn btn-outline-light btn-lg px-4 rounded-pill">
+            Open the editor
+        </a>
+    </div>
+</div>
+      </div>
+    </main>
+    <footer class="footer mt-auto py-3 ">
+      <div class="container pt-3 text-center">
+        <p class="text-body-secondary">
+          Created by
+          <a class="text-body-secondary" href="https://stefanbohacek.com/">Stefan Bohacek</a>.
+        </p>
+      </div>
+      <div class="container mt-5">
+        <div class="row align-items-center">
+          <div class="col-4 mx-auto text-center">
+            <p>
+              <a href="https://fightfascism.glitch.me/">
+                <img
+                  class="mw-100"
+                  loading="lazy"
+                  title="Fight Fascism sticker by Angus Johnston"
+                  alt="Fight fascism"
+                  src="/images/logos/fight-fascism-square.png">
+              </a>
+            </p>
+          </div>
+          <div class="col-4 mx-auto text-center">
+            <p>
+              <a href="https://blacklivesmatter.com/">
+                <img class="mw-100" loading="lazy" alt="Black Lives Matter" title="Black Lives Matter logo" src="/images/logos/blm.png">
+              </a>
+            </p>
+          </div>
+          <div class="col-4 mx-auto text-center">
+            <p>
+              <a href="https://indieweb.org/">
+                <img class="mw-100" loading="lazy" alt="IndieWeb" title="Support #indieweb!" src="/images/logos/indiewebcamp-black.png">
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <a
+        id="back-to-top"
+        class="fixed-bottom btn btn-secondary rounded-bottom-0 d-none pl-0"
+        role="button"
+        href="#"
+        title="Back to Top">
+        <svg
+          xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" width="1em" height="1em" fill="currentColor">
+          <!--! Font Awesome Free 6.4.2  -->
+          <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6
+            342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path>
+        </svg>
+        <small class="fw-bold">Back to top</small>
+      </a>
+    </footer>
+    <script>
+var _paq = window._paq = window._paq || [];
+/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+    var u="https://matomo.stefanbohacek.dev/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '20']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+})();
+</script>
+
+  </body>
+</html>

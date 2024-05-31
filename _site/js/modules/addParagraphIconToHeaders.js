@@ -1,0 +1,1 @@
+export default()=>{[...document.querySelectorAll("h2")].forEach((e=>{var t=e.getAttribute("id"),r=document.createElement("a");r.setAttribute("href","#"+t),r.classList.add("pilcrow-link"),r.innerHTML=`${e.innerHTML} <span class="pilcrow">¶</span>`,e.innerHTML=r.outerHTML}))};//# sourceMappingURL=addParagraphIconToHeaders.js.map
