@@ -2,6 +2,9 @@
 layout: layout-main.njk
 title: Tutorial
 permalink: /tutorial/
+eleventyNavigation:
+  key: Tutorial
+  order: 2
 ---
 
 <div class="p-5 mb-5 text-center bg-body-tertiary rounded-3">
