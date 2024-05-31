@@ -6,6 +6,8 @@ Own a piece of the web with your personal web page.
 
 ## Development
 
+This site is made with [11ty](https://www.11ty.dev/).
+
 ```sh
 npm install
 npm run dev
