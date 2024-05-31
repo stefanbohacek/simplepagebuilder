@@ -1,1 +1,0 @@
-{"version":3,"sources":["styles.scss"],"names":[],"mappings":"AAAQ,6BAAA,CACA,+BAAA,CACA,4BAAA,CACA,6BAAA","file":"styles.css","sourcesContent":["@import url(\"/css/fonts.css\");\r\n@import url(\"/css/general.css\");\r\n@import url(\"/css/dark.css\");\r\n@import url(\"/css/light.css\");\r\n"]}

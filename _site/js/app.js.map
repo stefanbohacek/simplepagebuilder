@@ -1,1 +1,0 @@
-{"version":3,"file":"app.js","names":["onReady","initEditor","getCookie","setCookie","tourGuide","document","documentElement","style","overflow","start"],"sources":["app.js"],"mappings":"OAAOA,YAAa,8BACbC,eAAgB,iCAChBC,cAAe,gCACfC,cAAe,gCACfC,cAAe,oBAEtBJ,SAAQ,KACNC,aAEKC,UAAU,gBACbG,SAASC,gBAAgBC,MAAMC,SAAW,SAC1CJ,UAAUK,QACVN,UAAU,cACZ","ignoreList":[]}
