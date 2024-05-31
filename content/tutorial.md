@@ -1,7 +1,7 @@
 ---
 layout: layout-main.njk
 title: Tutorial
-permalink: /Tutorial/
+permalink: /tutorial/
 ---
 
 <div class="p-5 mb-5 text-center bg-body-tertiary rounded-3">
