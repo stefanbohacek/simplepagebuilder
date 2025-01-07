@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp & npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
+    "dev": "gulp watch & npx @11ty/eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
