@@ -55,12 +55,7 @@ eleventyNavigation:
     later, but we will need to upload any images we want to use here.
 </p>
 <p class="mt-2">
-    My favorite places to recommend for hosting simple web pages are <a href="#hosting-glitch">Glitch</a> and <a href="#hosting-neocities">Neocities</a>. Both are free and fairly easy to use.
-</p>
-<p class="mt-2">
-    If you're not too sure which one to pick, go with Glitch, as it lets you
-    create a temporary project without having to create an account, so you'll get to try things out without having
-    to fully commit.
+    My favorite place to recommend for hosting simple web pages right now is <a href="#hosting-neocities">Neocities</a>; it's free and very easy to use.
 </p>
 <h2 class="mb-3" id="make">
     <a href="#make">Make your website</a>
@@ -176,7 +171,7 @@ eleventyNavigation:
         <a href="#hosting-neocities">Neocities</a>
     </li>
     <li>
-        <a href="#hosting-glitch">Glitch</a>
+        <a href="https://stefanbohacek.com/blog/so-long-glitch-and-thanks-for-all-the-apps/"><s>Glitch</s></a>
     </li>
 </ul>
 <h3 class="mb-3" id="hosting-neocities">
@@ -224,57 +219,6 @@ eleventyNavigation:
     When you're done, click the <mark>View</mark> button when editing your <mark>index.html</mark> file, or the name
     of the file if you're back in the dashboard, and you will see your finished web page. Congratulations!
 </p>
-
-<h3 class="mb-3" id="hosting-glitch">
-    <a href="#hosting-glitch">Glitch</a>
-</h3>
-<p class="mt-2">
-    <a href="https://glitch.com/">Glitch</a> aims to give you "fast, fun tools for building the website of your
-    dreams", and they do a pretty good job doing that. Glitch lets you host static websites for free, and you can <a href="https://glitch.com/pricing">upgrade</a> to build more advanced web apps.
-</p>
-<h4 class="mb-3" id="hosting-glitch-images">
-    <a href="#hosting-glitch-images">Upload images to Glitch</a>
-</h4>
-
-<p class="mt-2">
-    From the main <a href="https://glitch.com/">glitch.com</a> page, select the "Basic website" option. This will
-    create a new "remix" of a basic HTML website.
-</p>
-
-<p class="mt-2">
-    <a href="/images/screenshots/glitch-new-remix.png">
-        <img loading="lazy" class="w-100 screenshot" src="/images/screenshots/glitch-new-remix.png" alt="Screenshot of the Glitch home page with options to create a new project. An arrow is pointing at 'Basic website'.">
-    </a>
-</p>
-
-<p class="mt-2">
-    Head over to "Assets" in the sidebar and upload any images you'd like to add to your site. Clicking their
-    thumbnails will give you a URL you can copy and use in the page builder.
-</p>
-
-
-<video controls="" width="720" class="mw-100 mt-3 mb-3">
-    <source src="/videos/walkthrough/glitch-upload-image.mp4" type="video/mp4">
-</video>
-
-<h4 class="mb-3" id="hosting-glitch-site">
-    <a href="#hosting-glitch-site">Upload your site to Glitch</a>
-</h4>
-
-<p class="mt-2">
-    After you upload your images, edit the <mark>index.html</mark> file in the left-hand sidebar using the contents
-    of the <mark>index.html</mark> file from your site export. Then rename the <mark>style.css</mark> file to
-    <mark>css/style.css</mark>, which will create a new <mark>css</mark> folder to match the structure of your site,
-    and update this file as well.
-</p>
-
-<p class="mt-2">
-    When you're finished, you can use the "Open in new window" link in the top-right menu to view your new website.
-</p>
-
-<video controls="" width="720" class="mw-100 mt-3 mb-3">
-    <source src="/videos/walkthrough/glitch-upload-site.mp4" type="video/mp4">
-</video>
 
 <h2 class="mb-3" id="next">
     <a href="#next">What's next?</a>
