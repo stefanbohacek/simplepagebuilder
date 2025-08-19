@@ -235,8 +235,11 @@ eleventyNavigation:
 
 <ul class="mt-2">
     <li>
-        <a href="https://dap.berkeley.edu/testing/checklist-manual-reviews">make sure your site is accessible to
+        make sure your site is <a href="https://dap.berkeley.edu/testing/checklist-manual-reviews">accessible to
             everyone</a>
+    </li>
+    <li>
+        make your site <a href="https://stefanbohacek.com/blog/resources-for-keeping-the-web-free-open-and-poetic/#make-your-website-fediverse-ready">fediverse-ready</a>
     </li>
     <li>
         find inspiration with sites like
