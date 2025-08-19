@@ -7,6 +7,7 @@ export default () => {
     plugins: [
       "grapesjs-preset-webpage",
       "gjs-blocks-basic",
+      "grapesjs-plugin-header",
       "grapesjs-custom-code",
       "grapesjs-plugin-export",
       "grapesjs-touch",
@@ -17,6 +18,7 @@ export default () => {
       "grapesjs-preset-webpage": {
         textCleanCanvas: "Are you sure you want to remove everything?",
       },
+      "grapesjs-plugin-header": {},
       "grapesjs-custom-code": {},
       "grapesjs-plugin-export": {
         filenamePfx: "my-personal-site",
